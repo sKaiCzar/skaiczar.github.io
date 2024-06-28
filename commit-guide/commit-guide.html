@@ -2,9 +2,8 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
 <head>
   <meta charset="utf-8" />
-  <meta name="generator" content="pandoc" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
-  <title>README</title>
+  <title>Commit Guide</title>
   <style>
     html {
       color: #1a1a1a;
@@ -173,9 +172,14 @@
 </head>
 <body>
 <h1 id="commit-guide">commit-guide</h1>
+<p>The following guides explain my git commit process.</p>
+<h2 id="commit-style">Commit Style</h2>
 <p>Prefered commit style for my projects
-<code>commit_string = "[ &lt;commit_type&gt; ] : &lt;commit_message&gt;"</code></p>
-<h2 id="types-of-commit">Types of commit:</h2>
+<code>commit_string = "[ &lt;commit_type&gt; ] : &lt;commit_message&gt;"</code>.
+Commit_type can be be an array too to better explain a commit, but it is
+preferred that there is a single instance of commit_type in a
+commit.</p>
+<h3 id="types-of-commit">Types of commit:</h3>
 <p>The following should be the types of commit:</p>
 <ul>
 <li>setup : barebone setting up default project</li>
@@ -196,7 +200,7 @@
 <li>revert : back tracking to old commit</li>
 <li>update : errata</li>
 </ul>
-<h2 id="commit-messages">Commit messages:</h2>
+<h3 id="commit-messages">Commit messages:</h3>
 <p>The commit message should:</p>
 <ul>
 <li>be clear</li>
@@ -206,6 +210,17 @@
 <li>be in english language. (preferably american eng because it has
 smaller char length for same words).</li>
 </ul>
+<h2 id="atomic-commit">Atomic Commit</h2>
+<p>For productivity reasons prefer atomic commits, i.e, commits of
+smallest meaningful change. Meaningful is ofcourse a subjective term but
+a general explaination for atomic commit can be changes containing all
+the essential elements to stand on its own. Smaller tweaks, like fixing
+tiny bugs or adding types which are necessary parts of the whole, but on
+their own, they don’t bring explicit value to the feature.</p>
+<h2 id="squashing-commits">Squashing commits</h2>
+<p>You can squash commits to a meaningful commit after a sufficienty
+large period or a development cycle has been completed and scope of
+previous change has little to no aftermath at the current stage.</p>
 <p>Notes: - Prefer git rebase in interactive mode over git pull unless
 there is an use case for any other command. - Prefer
 <code>git add --interactive</code> over <code>git add .</code> .</p>
